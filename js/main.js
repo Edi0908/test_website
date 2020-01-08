@@ -21,21 +21,30 @@ $(document).ready(function () {
 	});
 
 
-
+// scroll
+$('a[href*="#"]').bind("click",function(e){
+	var anchor =$(this);
+	$('html, body').stop().animate({
+		scrollTop: $(anchor.attr('href')).offset().top-60
+	}, 1200);
+	e.preventDefault();
+});
 
 // burger
 var div = $('.header__button_menu');
 var button = $('.span__btn');
 var menu = $('.header__nav__list');
 
-
 div.click(function() {
 	button.toggleClass('open');
 	menu.toggleClass('activ');
+	$('body').toggleClass('lock');
 });
-// $('.header__nav__list').on('click', function(e) {
-// 	div.click().removeClass('activ');
-// });
+$('.header__nav__list, .header__item').click(function(event){
+	$('.header__nav__list').removeClass('activ');
+	$('.span__btn').removeClass('open');
+	$('body').removeClass('lock');
+});
 
 
 // animation elements
@@ -52,15 +61,19 @@ $(document).ready(function(){
 $('.modal_1').click(function() {
 	$('.filter_1').fadeIn();
 	$('.filter_1').addClass('disabled');
+	$('body').css('overflow', 'hidden');
 });
 $('.modal_2').click(function() {
 	$('.filter_2').fadeIn();
 	$('.filter_2').addClass('disabled');
+	$('body').css('overflow', 'hidden');
 });
 
 // закрытие окна на крестик
-$('.modal-close').click(function() {
+$('.modal-close').click(function(event) {
 	$('.filter_1, .filter_2').fadeOut();
+	event.preventDefault();
+	$('body').css('overflow', 'auto');
 });
 
 // закрытие по клику вне окна
@@ -71,6 +84,7 @@ $(document).on('click', function(e){
 	||	($(e.target).hasClass('modal_1')))
 	) {
 		$('.filter_1').fadeOut();
+		$('body').css('overflow', 'auto');
 	}
 });
 $(document).on('click', function(e){
@@ -83,6 +97,7 @@ $(document).on('click', function(e){
 	}
 });
 
+
 // открыть по таймеру
 // $(window).on('load', function () {
 // 	setTimeout(function() {
@@ -93,16 +108,5 @@ $(document).on('click', function(e){
 // 		}
 // 	}, 5000);
 // });
-
-// scroll
-var $page = $('html, body');
-$('a[href*="#"]').click(function(){
-	$page.animate({
-		scrollTop: $($.attr(this, 'href')).offset().top
-	}, 600);
-	return false;
-});
-
-
 
 });

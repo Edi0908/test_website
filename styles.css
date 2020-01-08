@@ -31,7 +31,9 @@ button {
 	cursor: pointer;
 	outline: none;
 }
-
+.lock {
+	overflow: hidden !important;
+}
 /* modal form */
 .filter_1, .filter_2 {
 	position: fixed;
@@ -41,7 +43,7 @@ button {
 	height: 100vh;
 	background: #00000085;
 	display: none;
-	z-index: 2;
+	z-index: 4;
 }
 .modal-form {
 	/* position: absolute;
@@ -163,11 +165,11 @@ button {
 	font-size: 16px;
 	padding: 13px 46px 11px 40px;
 	box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.82);
-	transition: box-shadow 0.5s;
-	-webkit-transition: box-shadow 0.5s;
-	-moz-transition: box-shadow 0.5s;
-	-ms-transition: box-shadow 0.5s;
-	-o-transition: box-shadow 0.5s;
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
 }
 .modal__btn:hover ,
 .modal__close__btn:hover {
@@ -468,11 +470,11 @@ button {
 	border: 1px solid #ff4e2e;
 	display: inline-block;
 	cursor: pointer;
-	transition: background-color 0.5s;
-	-webkit-transition: background-color 0.5s;
-	-moz-transition: background-color 0.5s;
-	-ms-transition: background-color 0.5s;
-	-o-transition: background-color 0.5s;
+	transition: box-shadow background-color 0.5s;
+	-webkit-transition: box-shadow background-color 0.5s;
+	-moz-transition: box-shadow background-color 0.5s;
+	-ms-transition: box-shadow background-color 0.5s;
+	-o-transition: box-shadow background-color 0.5s;
 }
 /* ....................... section ..................... */
 .section {
@@ -672,7 +674,7 @@ button {
 }
 .footer__address__mail-link, .footer__address__tel-link {
 	margin-left: 15px;
-	font-family: 'Roboto Regular';
+	font-family: 'Roboto';
 	font-weight: 400;
 }
 .fas {
