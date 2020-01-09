@@ -34,8 +34,8 @@
 					<button class="modal-close">
 						<span class="modal__close__btn"></span>
 					</button>
-					<input class="modal-form__input" type="text" name="name" placeholder="Ваше Имя">
-					<input class="modal-form__input" type="tel" placeholder="Ваш номер телефона"> 
+					<input class="modal-form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё]+" placeholder="Ваше Имя" required>
+					<input class="modal-form__input" type="tel" name="phone" maxlength="18" placeholder="Ваш номер телефона" required> 
 					<button class="modal__btn button--info">Отправить</button>
 				</form>
 			</div>
@@ -46,9 +46,9 @@
 						<button class="modal-close">
 							<span class="modal__close__btn"></span>
 						</button>
-						<input class="modal-form__input" type="text" name="name" placeholder="Ваше Имя">
-						<input class="modal-form__input" type="tel" placeholder="Ваш номер телефона">
-						<input class="modal-form__input" type="email" placeholder="Электронная почта"> 
+						<input class="modal-form__input" type="text" name="name" pattern="[A-Za-zА-Яа-яЁё]+" placeholder="Ваше Имя" required>
+						<input class="modal-form__input" type="tel" placeholder="Ваш номер телефона" required>
+						<input class="modal-form__input" type="email" placeholder="Электронная почта" required> 
 						<button class="modal__btn button--info">Отправить</button>
 				</form>
 			</div>
@@ -129,7 +129,7 @@
    					</div>
    					<div class="item">
    						<img src="img/OwlCarousel/Layer3.png" alt="img">
-   						<p class="portfolio__text">Сайт магазина <span>&laquo</span>Рыболов<span>&raquo</span></p>
+   						<p class="portfolio__text">Сайт магазина <span>&laquo;</span>Рыболов<span>&raquo;</span></p>
 					</div>
 					<div class="item">
 						<img src="img/OwlCarousel/Layer2.png" alt="img">

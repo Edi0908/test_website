@@ -4,6 +4,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 }
+body {
+	overflow-x: hidden;
+}
 html {
 	box-sizing: border-box;
 }
@@ -30,6 +33,12 @@ a {
 button {
 	cursor: pointer;
 	outline: none;
+}
+input:invalid:not(:placeholder-shown) {
+	border-color: #dc3545;
+}
+input:valid:not(:placeholder-shown) {
+	border-color: #20c997;
 }
 .lock {
 	overflow: hidden !important;
