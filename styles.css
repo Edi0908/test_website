@@ -789,9 +789,14 @@ input:valid:not(:placeholder-shown) {
 	.section__button, .portfolio__button {
 		padding: 23px 85px;
 	}
-	.ellipse {
-		top: 20vh;
-	}	
+	.element-3 {
+		font-size: 20px;
+		transform: translateY(46vh) translateX(18vw);
+		-webkit-transform: translateY(46vh) translateX(18vw);
+		-moz-transform: translateY(46vh) translateX(18vw);
+		-ms-transform: translateY(46vh) translateX(18vw);
+		-o-transform: translateY(46vh) translateX(18vw);
+}
 	.main__bg {
 		padding-left: 40px;
 		background-size: 70%;
@@ -887,12 +892,12 @@ input:valid:not(:placeholder-shown) {
 		-o-transform: translateY(18vh) translateX(12vw) rotate(335deg);
 }
 	.element-2 {
-		transform: translateY(35vh) translateX(-20vw) rotate(335deg);
-		-webkit-transform: translateY(55vh) translateX(-23vw) rotate(335deg);
-		-moz-transform: translateY(35vh) translateX(-20vw) rotate(335deg);
-		-ms-transform: translateY(35vh) translateX(-20vw) rotate(335deg);
-		-o-transform: translateY(35vh) translateX(-20vw) rotate(335deg);
-	}
+		transform: translateY(45vh) translateX(-20vw) rotate(335deg);
+		-webkit-transform: translateY(45vh) translateX(-20vw) rotate(335deg);
+		-moz-transform: translateY(45vh) translateX(-20vw) rotate(335deg);
+		-ms-transform: translateY(45vh) translateX(-20vw) rotate(335deg);
+		-o-transform: translateY(45vh) translateX(-20vw) rotate(335deg);
+}
 	.element-3 {
 		transform: translateY(64vh) translateX(11vw) rotate(335deg);
 		-webkit-transform: translateY(64vh) translateX(11vw) rotate(335deg);
@@ -901,12 +906,13 @@ input:valid:not(:placeholder-shown) {
 		-o-transform: translateY(64vh) translateX(11vw) rotate(335deg);
 	}
 	.element-4 {
-		transform: translateY(-9vh) translateX(40vw);
-		-webkit-transform: translateY(-9vh) translateX(40vw);
-		-moz-transform: translateY(-9vh) translateX(40vw);
-		-ms-transform: translateY(-9vh) translateX(40vw);
-		-o-transform: translateY(-9vh) translateX(40vw);
-	}
+		font-size: 28px;
+		transform: translateY(-4vh) translateX(40vw);
+		-webkit-transform: translateY(-4vh) translateX(40vw);
+		-moz-transform: translateY(-4vh) translateX(40vw);
+		-ms-transform: translateY(-4vh) translateX(40vw);
+		-o-transform: translateY(-4vh) translateX(40vw);
+}
 	.element-5 {
 		transform: translateY(-51vh) translateX(-10vw);
 		-webkit-transform: translateY(-51vh) translateX(-10vw);
@@ -941,6 +947,9 @@ input:valid:not(:placeholder-shown) {
 	}
 }
 @media screen and (max-width: 898px) {
+	h1 {
+		font-size: 46px;
+	}
 	.main__text {
 		font-size: 18px;
 	}
