@@ -38,7 +38,7 @@ var menu = $('.header__nav__list');
 div.click(function() {
 	button.toggleClass('open');
 	menu.toggleClass('activ');
-	$('body').toggleClass('lock');
+	$('body').addClass('lock');
 });
 $('.header__nav__list, .header__item').click(function(event){
 	$('.header__nav__list').removeClass('activ');
@@ -56,57 +56,25 @@ $(document).ready(function(){
   
 
 //   modall windows
+$(function() {
+	$('.js__modal__open').click(function() {
+		var modal = $(this).data('modal');
+		$('#' + modal).addClass('filter__show');
+		$('body').toggleClass('lock');
+	});
+	$('.modal-close').click(function() {
+		$(this).parents().removeClass('filter__show');
+		$('body').toggleClass('lock');
+	});
+});
 
-// открыть по кнопке
-$('.modal_1').click(function() {
-	$('.filter_1').fadeIn();
-	$('.filter_1').addClass('disabled');
-	$('body').css('overflow', 'hidden');
-});
-$('.modal_2').click(function() {
-	$('.filter_2').fadeIn();
-	$('.filter_2').addClass('disabled');
-	$('body').css('overflow', 'hidden');
-});
-
-// закрытие окна на крестик
-$('.modal-close').click(function(event) {
-	$('.filter_1, .filter_2').fadeOut();
-	event.preventDefault();
-	$('body').css('overflow', 'auto');
-});
 
 // закрытие по клику вне окна
-$(document).on('click', function(e){
-	if (!(
-	($(e.target).parents('.modal').length)
-	||	($(e.target).hasClass('modal'))
-	||	($(e.target).hasClass('modal_1')))
-	) {
-		$('.filter_1').fadeOut();
-		$('body').css('overflow', 'auto');
+$(document).mouseup(function(e) {
+	var popup = $('.modal');
+	if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+		$('.filter__show').removeClass('filter__show');
+		$('body').removeClass('lock');
 	}
 });
-$(document).on('click', function(e){
-	if (!(
-	($(e.target).parents('.modal').length)
-	||	($(e.target).hasClass('modal'))
-	||	($(e.target).hasClass('modal_2')))
-	) {
-		$('.filter_2').fadeOut();
-	}
-});
-
-
-// открыть по таймеру
-// $(window).on('load', function () {
-// 	setTimeout(function() {
-// 		if($('.filter_2').hasClass('disabled')) {
-// 			return false;
-// 		} else {
-// 			$('.filter_2').fadeIn();
-// 		}
-// 	}, 5000);
-// });
-
 });
